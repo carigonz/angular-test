@@ -1,0 +1,88 @@
+<style>
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dni-section{
+        width: 95vw;
+    }
+    .header-container {
+        background-color: #f0eaea;
+        padding: 15px 12px;
+        border-bottom: 1px solid grey;
+    }
+    .dni-input{
+        background-color: #f7e8e8;
+    }
+    .form{
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .form input {
+        padding: 10px 5px; 
+        font-size: 20px;
+    }
+    .form button {
+        background-color: yellow;
+        padding: 7px 15px;
+        width: 70px;
+        border-radius: 5px;
+    }
+    .dni-output{
+        border: 1px solid red;
+    }
+</style>
+
+<div class="container">
+    <section class='dni-section'>
+        <div class="header-container">
+            Datos de la visita
+        </div>
+        <div class="dni-input">
+            <form [formGroup]='visitForm' class='form'>
+                <div>
+                    <label>Nro. de tarjeta de ingreso:</label>
+                    <input type="number" class="form-control" name="tarjet" formControlName="tarjet"/>
+                    <label>Fecha de Ingreso</label>
+                    <span>como pongo fecha de hoy?</span>
+                    <label>Hora de Ingreso</label>
+                    <input type="time" name="" id="">
+                </div>
+                <div>
+                    <label for="">Visita a:</label>
+                    <select class="browser-default custom-select">
+                        <option
+                            selected
+                            *ngFor="let user of users"
+                            [value]="user.ids"
+                        >
+                            {{ user.name }} {{user.lastName}}
+                        </option>
+                    </select>
+                    <label for="">Sector:</label>
+                    <select class="browser-default custom-select">
+                        <option
+                            selected
+                            *ngFor="let user of users"
+                            [value]="user.ids"
+                        >
+                            {{ user.name }} {{user.lastName}}
+                        </option>
+                    </select>
+
+
+                </div>
+                <button (click)="onClick()">Consultar</button>
+            </form>
+            <div class="dni-output">
+                <span>Nombre y apellido</span>
+                <p>{{fullName}}</p>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,12 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from "@angular/common/http";
+
+//material components
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from "@angular/material";
+
+// components
+import { HeaderComponent } from './components/header/header.component';
+import { DniSectionComponent } from './components/dnisection/dnisection.component';
+import { EntrySectionComponent } from './components/entrysection/entry-section.component';
+//import { RecordsComponent } from './components/records/records.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule],
+  declarations: [AppComponent, HeaderComponent, DniSectionComponent, EntrySectionComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule,
+    FormsModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
