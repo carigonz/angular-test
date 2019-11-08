@@ -3,11 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from "@angular/common/http";
-
-//material components
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from "@angular/material";
+import { HttpClientModule } from "@angular/common/http";
+import { FakeUsersService } from './components/dnisection/fakeUsers.service';
 
 // components
 import { HeaderComponent } from './components/header/header.component';
@@ -17,10 +14,10 @@ import { EntrySectionComponent } from './components/entrysection/entry-section.c
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, DniSectionComponent, EntrySectionComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule,
-    FormsModule,
-    ReactiveFormsModule],
-  providers: [],
+  imports: [BrowserModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  providers: [FakeUsersService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+
+}

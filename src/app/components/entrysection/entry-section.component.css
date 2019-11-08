@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin:0px;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.label{
+    display: block;
+    padding-top: 10px;
+    padding-left:12px;
+}
+.input-section{
+    width: 95vw;
+    font-weight: bold;
+    border-bottom: 1px solid #eee8e8;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee8e8;
+}
+.form input {
+    padding: 5px 5px; 
+    font-size: 20px;
+    margin: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 320px;
+}
+.form button {
+    background-color: #fdd306;
+    font-weight: bold;
+    padding: 7px 10px;
+    width: 76px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 7px;
+  transition: all 500ms ease;
+}
+.form button:hover {
+    background-color: transparent;
+    color: #fdd306;
+    border: 1px solid #fdd306;
+}
+.timestamp{
+    padding: 12px 15px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.select-container{
+    display:flex;
+    flex-direction: column;
+}
+.timestamp span {
+    padding-top: 12px;
+    font-weight: initial;
+}
+.timestamp div {
+    display: flex;
+    flex-direction: column;
+}
+.select-tarjet  {
+    width: 320px;
+    padding: 5px 5px; 
+    font-size: 20px;
+    margin: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 320px;
+}
+
+@media only screen and (min-width: 600px) {
+    .input-section {
+        width: 60vw;
+    }
+    .timestamp {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 950px){
+    .input-section {
+        max-width: 80vw;
+    }
+    .desktop-container{
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+    .timestamp{
+        justify-content: space-around;
+    }
+    .timestamp div {
+        padding: 0 40px;
+    }
+    .select-container{
+        flex-direction: row;
+    }
+}

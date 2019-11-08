@@ -1,8 +1,9 @@
 <?php
 
-header('Access-Control-Allow-Origin: *'); 
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+// header('Access-Control-Allow-Origin: *'); 
+// header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
+require('config.json');
 class DbMysql 
 {
 	protected $conection;
@@ -20,6 +21,9 @@ class DbMysql
 	try {
 		$this->conection = new PDO ($dsn, $user, $pass);
 		//para que db muestre los errores en php
+		echo "$this->connection";
+		exit;
+	
 		$this->conection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (\Exception $e) {
 		echo "hubo un error <br>";
@@ -30,4 +34,4 @@ class DbMysql
     
     
 }
-header('Content-Type: application/json');
+//header('Content-Type: application/json');

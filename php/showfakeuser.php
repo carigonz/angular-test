@@ -5,14 +5,16 @@
   require("dbmysql.php"); 
   $conexion = new DbMysql;
 
-  $fakeData = mysqli_query($conexion, "SELECT * FROM fakeusers");
+
+
+  $fakeData = mysqli_query($conexion, "SELECT * FROM fakeusers WHERE dni=$_GET[dni]");
   
-  while ($resultado = mysqli_fetch_array($fakeData))  
+  while ($result = mysqli_fetch_array($fakeData))  
   {
-    $datos[] = $resultado;
+    $data[] = $result;
   }
   
-  $json = json_encode($datos); 
+  $json = json_encode($data); 
 
   echo $json; 
   

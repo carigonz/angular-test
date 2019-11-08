@@ -3,7 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-entry-section',
-    templateUrl: 'entry-section.component.html'
+    templateUrl: 'entry-section.component.html',
+    styleUrls: ['entry-section.component.css']
 })
 
 export class EntrySectionComponent implements OnInit {

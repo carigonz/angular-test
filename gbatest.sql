@@ -44,13 +44,13 @@ INSERT INTO `fakeusers` VALUES (1,'38327896','Carolina Gonzalez'),(2,'36610322',
 UNLOCK TABLES;
 
 --
--- Table structure for table `register`
+-- Table structure for table `registers`
 --
 
-DROP TABLE IF EXISTS `register`;
+DROP TABLE IF EXISTS `registers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `register` (
+CREATE TABLE `registers` (
   `id` bigint(20) NOT NULL,
   `fakeuser_id` bigint(20) NOT NULL,
   `date` varchar(45) DEFAULT NULL,
@@ -65,12 +65,12 @@ CREATE TABLE `register` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `register`
+-- Dumping data for table `registers`
 --
 
-LOCK TABLES `register` WRITE;
-/*!40000 ALTER TABLE `register` DISABLE KEYS */;
-/*!40000 ALTER TABLE `register` ENABLE KEYS */;
+LOCK TABLES `registers` WRITE;
+/*!40000 ALTER TABLE `registers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `registers` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -134,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-06 21:23:20
+-- Dump completed on 2019-11-08 16:48:07
