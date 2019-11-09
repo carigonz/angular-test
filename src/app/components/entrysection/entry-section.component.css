@@ -13,8 +13,9 @@
 }
 .label{
     display: block;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left:12px;
+    max-width: 320px;
 }
 .input-section{
     width: 95vw;
@@ -34,6 +35,7 @@
     border-radius: 5px;
     cursor: pointer;
     max-width: 320px;
+    max-height: 37px;
 }
 .form button {
     background-color: #fdd306;
@@ -54,7 +56,7 @@
     padding: 12px 15px;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .select-container{
     display:flex;
@@ -99,11 +101,16 @@
     }
     .timestamp{
         justify-content: space-around;
+        margin-top: -24px;
     }
     .timestamp div {
         padding: 0 40px;
     }
     .select-container{
         flex-direction: row;
+        justify-content: space-around;
+    }
+    .select-tarjet{
+        width:285px;
     }
 }

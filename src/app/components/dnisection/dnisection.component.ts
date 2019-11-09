@@ -25,10 +25,10 @@ export class DniSectionComponent implements OnInit {
     
     }
 
-    validate() {
-        console.log('holis');
-        this.fakeService.getFakeUsers(1).subscribe(
-            result => this.name = result
+    validate(dniForm) {
+        console.log(this.dniForm.get('dni'));
+        this.fakeService.getFakeUsers(38327896).subscribe(
+            result => console.log(result)
           );
     }
 
